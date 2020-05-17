@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ThemeController@index');
+
+Route::get('/category/{id}/products','ProductController@getCategoryProducts');
